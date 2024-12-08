@@ -4,7 +4,7 @@ import hashlib
 from pydantic import BaseModel
 import random
 
-CATEGORIES = ["pii", "phi", "jailbreak", "finance", "security", "violence"]
+CATEGORIES = ["pii", "phi", "technical data", "health tips", "finance tips", "security", "code generation"]
 
 
 class CategoryDetection(BaseModel):
