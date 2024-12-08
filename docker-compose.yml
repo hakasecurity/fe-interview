@@ -1,0 +1,10 @@
+services:
+  backend:
+    build:
+      context: api_server
+      dockerfile: Dockerfile
+    command: ["uv", "run", "uvicorn", "api_server.server:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--reload-dir", "/app"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api_server/api_server:/app/api_server/api_server
